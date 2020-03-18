@@ -1,0 +1,75 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform
+  - thanks
+  - out_of_scope
+  - service_provider
+
+# values extracted from user input by bot
+entities:
+  - service_type
+  - location
+
+# memory of bot
+slots:
+  service_type:
+    type: text
+  cost: 
+    type: unfeaturized
+  location:
+    type: text
+  address:
+    type: unfeaturized
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_how_can_i_help
+  - utter_ask_location
+  - action_service_search
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot."
+
+  utter_how_can_i_help:
+  - text: "Hello, I am a customer support bot. I can help you find a hotel. How can I help?"
+  - text: "Hi, My name is finrsch bot. How can I help you today?"
+
+  utter_ask_location:
+  - text: "Can you provide your location please?"
+  - text: "To find the nearest {service_type} I need your address."
+
+  utter_out_of_scope:
+  - text: "Can you rephrase please?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
