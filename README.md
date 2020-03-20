@@ -1,21 +1,48 @@
 # Customer Support Chatbot
+It helps users to find the hotels nearby.
 
-Run the following commands to setup the chatbot
+## Installation (Mac and Linux)
 
-Clone the repo and then follow the following steps:
+Clone the repo and then run the following commands
 
-1) Go to the directory
+- Create a virtual environment
+```bash
+python3 -m venv ./venv
+```
+- Activate virtual environment
+```bash
+source ./venv/bin/activate
+```
+- Install all the required packages
+```bash
+pip3 install -r requirements.txt
+```
 
-2) Create a virtual environment 
-$ python3 -m venv ./venv
+## Installation (Windows)
 
-3) Activate the virtual environment 
-$ source ./venv/bin/activate
+Clone the repo and then run the following commands
 
-4) Install the requirements
-$ pip3 install -r requirements.txt
+- Create a virtual environment
+```bash
+python -m venv ./venv
+```
+- Activate virtual environment
+```bash
+venv/Script/activate
+```
+- Install all the required packages
+```bash
+pip install -r requirements.txt
+```
 
-5) Run the chatbot
+
+## Usage
+
+```bash
 $ rasa run actions & rasa shell
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
